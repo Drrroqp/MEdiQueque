@@ -1,0 +1,74 @@
+@import "https://fonts.fontstorage.com/import/sansation.css";
+.body{
+    margin: 0px;
+}
+
+.navuphead{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.textheader{
+    font-family: "Sansation";
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #4f4f4f;
+    margin-left: 32px;
+    margin-top: 3px;
+}
+
+.headerimg2{
+    position: absolute;
+}
+
+.headerimg1{
+    position: absolute;
+}
+
+.headerimg3{
+    position: absolute;
+}
+
+.time{
+    position: relative;
+}
+
+.geo{
+    position: relative;
+}
+
+.phone{
+    position: relative;
+}
+
+.aboutcontainer{
+    
+    width: 2100px;
+    height: 406px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+    background: linear-gradient(90deg, #67f6ee, #4d82b8);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 300px;
+}
+
+.nav-item{
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-left: 100px;
+}
+
+
