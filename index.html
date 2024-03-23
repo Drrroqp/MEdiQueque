@@ -26,10 +26,13 @@
         href="https://fonts.googleapis.com/css2?family=Carme&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/header.css">
+    <script src="assets/scripts/index.js"></script>
     <title>Mediqueque</title>
 </head>
 
 <body class="body">
+
+    <!-- Шапка -->
 
     <header>
         <section class="topnav">
@@ -101,8 +104,9 @@
                             или <button class="registrationbtn">авторизуйтесь</button> для возможности записаться.
                         </div>
 
-                        <button class="zapis-text"><img src="assets/images/health.png" class="health">Записаться<img
-                                src="assets/images/arrow-right.png" class="arrow"></button>
+                        <button class="zapis-text" id="open-modal-btn"><img src="assets/images/health.png"
+                                class="health">Записаться<img src="assets/images/arrow-right.png"
+                                class="arrow"></button>
 
                     </div>
                     <div class="man">
@@ -113,4 +117,44 @@
         </section>
     </header>
 
+    <!-- Модальное окно выбора врача -->
+
+    <div class="modal" id="my-modal">
+        <div class="modal__box">
+            <button class="modal__close-btn" id="close-my-modal-btn">
+                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                        fill="#333333" />
+                    <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+                </svg>
+            </button>
+            <div class="titledoc">
+                <div class="titletextdoc">Выберете врача для записи
+            
+                    <div class="vibordoctor">
+                        <div class="rowvibordoctor">
+                            <div class="colvibordoctor">
+                                <button class="doctor1stolbik">Терапевт</button>
+                                <button class="doctor1stolbik">Гинеколог</button>
+                                <button class="doctor1stolbik">Офтальмолог</button>
+                                <button class="doctor1stolbiklower">Невролог</button>
+                            </div>
+                            <div class="colvibordoctor">
+                                <button class="doctor">Стоматолог</button>
+                                <button class="doctor">Кардиолог</button>
+                                <button class="doctor">Уролог</button>
+                                <button class="doctorlower">Дерматолог</button>
+                            </div>
+                            <div class="colvibordoctor">
+                                <button class="doctor">Психолог</button>
+                                <button class="doctor">Онколог</button>
+                                <button class="doctor">Диетолог</button>
+                                <button class="doctorlower">Рентгенолог</button>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
