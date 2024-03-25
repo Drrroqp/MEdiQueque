@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800&display=swap"
@@ -25,8 +30,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Carme&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/registration_scripts.js"></script>
+    <script src="assets/scripts/modal_scripts.js"></script>
     <title>Mediqueque</title>
 </head>
 
@@ -68,11 +75,11 @@
                     <a class="nav-item" href="@">О клинике</a>
                     <a class="nav-item" href="@">Наши врачи</a>
 
-                    <button class="nav-item">
+                    <button class="nav-item" id="open-modal-btn-login">
                         <img src="assets/images/loggg.png" class="regicon">
                         Вход
                     </button>
-                    <button class="nav-item">
+                    <button class="nav-item" id="open-modal-btn-registration">
                         <img src="assets/images/registrat.png" class="regicon">
                         Регистрация
                 </div>
@@ -100,8 +107,8 @@
                     </div>
                     <div class="zapis">
                         <div class="titlezapis">Запись на приём к врачу</div>
-                        <div class="subtittlezapis"><button class="registrationbtn">Зарегистрируйтесь</button> на сайте
-                            или <button class="registrationbtn">авторизуйтесь</button> для возможности записаться.
+                        <div class="subtittlezapis"><button class="registrationbtn" id="open-modal-btn-registration2">Зарегистрируйтесь</button> на сайте
+                            или <button class="registrationbtn" id="open-modal-btn-login2">авторизуйтесь</button> для возможности записаться.
                         </div>
 
                         <button class="zapis-text" id="open-modal-btn"><img src="assets/images/health.png"
@@ -129,8 +136,8 @@
                 </svg>
             </button>
             <div class="titledoc">
-                <div class="titletextdoc">Выберете врача для записи
-            
+                <h1 class="titletextdoc">Выберете врача для записи:
+
                     <div class="vibordoctor">
                         <div class="rowvibordoctor">
                             <div class="colvibordoctor">
@@ -151,10 +158,56 @@
                                 <button class="doctor">Диетолог</button>
                                 <button class="doctorlower">Рентгенолог</button>
                             </div>
-                            </div>
+                        </div>
                     </div>
-                </div>
+                </h1>
             </div>
         </div>
     </div>
+
+    <!-- Модальное окно регистрации -->
+
+    <div class="modal" id="my-modal-registr">
+        <div class="modal__box">
+            <button class="modal__close-btn" id="close-my-modal-btn-reg">
+                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                        fill="#333333" />
+                    <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+                </svg>
+            </button>
+            <div class="registartion-box">
+                <h1 class="Registration-text">Регистрация</h1>
+                <input class="registration-elements" id="phone-num" type="text" placeholder="Введите номер телефона">
+                <input class="registration-elements" id="mail" type="text" placeholder="Введите почту">
+                <input class="registration-elements" id="password" type="text" placeholder="Введите пароль">
+                <input class="registration-elements" id="years" type="text" placeholder="ДД.MM.ГГГГ">
+                <input class="registration-elements" id="fio" type="text" placeholder="Фамилия Имя Отчество">
+                <button class="registr-btn" id="submit-reg" type="submit">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно авторизации -->
+
+    <div class="modal" id="my-modal-autorization">
+        <div class="modal__box">
+            <button class="modal__close-btn" id="close-my-modal-btn-aut">
+                <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                        fill="#333333" />
+                    <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+                </svg>
+            </button>
+            <div class="registartion-box">
+                <h1 class="Registration-text">Вход</h1>
+                <input class="registration-elements" id="phone-num" type="text" placeholder="Введите почту">
+                <input class="registration-elements" id="phone-num" type="text" placeholder="Введите пароль">
+                <button class="registr-btn" id="submit-login" type="submit">Войти</button>
+                <h1>У вас нет аккаунта?</h1>
+                <button
+            </div>
+        </div>
+    </div>
+
 </body>
