@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("open-modal-btn-registration2").addEventListener("click", function() {
       document.getElementById("my-modal-registr").classList.add("open");
     });
+    document.getElementById("open-modal-btn-registration3").addEventListener("click", function() {
+      document.getElementById("my-modal-autorization").classList.remove("open");
+      document.getElementById("my-modal-registr").classList.add("open");
+    });
   
     // Закрыть модальное окно
     document.getElementById("close-my-modal-btn-reg").addEventListener("click", function() {
